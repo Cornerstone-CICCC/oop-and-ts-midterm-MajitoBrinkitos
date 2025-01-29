@@ -1,16 +1,14 @@
 {
-  "name": "oop-ts-lab-1",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "bakery",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "live-server src --open=./index.html"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "live-server": "^1.2.2"
+  "dependencies": {
+    "astro": "^5.1.10"
   }
 }
