@@ -36,7 +36,7 @@
   --color-prod: #ffffff;
   --btn-prod: #f3bc77;
   --btn-color: black;
-  --background-ft: #8B4513;
+  --background-ft: black;
   --text-ft: white;
   --family-ft: "Playwrite IN", serif;
 }
@@ -449,6 +449,20 @@
 
 .product-category {
   margin: 10px 0;
+}
+
+.bakery-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bakery-card .bakery-img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {

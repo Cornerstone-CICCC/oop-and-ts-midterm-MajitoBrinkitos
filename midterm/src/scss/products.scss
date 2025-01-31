@@ -107,6 +107,20 @@
     margin: 10px 0;
   }
 
+  //.bakery-card
+  .bakery-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bakery-img {
+      width: 100%;
+      max-width: 350px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
 
   //Media queries
   @media (min-width: 768px) {

@@ -35,7 +35,7 @@
       const showHideCartSpan = document.getElementById('show-hide-cart');
       let isCartShowing = false;
   
-      const products = [
+      /* const products = [
         { id: 1, name: "Vanilla Cupcakes (6 Pack)", price: 12.99, category: "Cupcake" },
         { id: 2, name: "French Macaron", price: 3.99, category: "Macaron" },
         { id: 3, name: "Pumpkin Cupcake", price: 3.99, category: "Cupcake" },
@@ -52,9 +52,9 @@
         { id: 14, name: "Blueberry Cupcake", price: 2.99, category: "Cupcake" },
         { id: 15, name: "Almond Croissant", price: 1.69, category: "Croissant" },
         { id: 16, name: "Custom Wedding Cake", price: 1000, category: "Wedding Cakes" },
-      ];
+      ]; */
   
-      products.forEach(({ name, id, price, category }) => {
+/*       products.forEach(({ name, id, price, category }) => {
         bakeryCards.innerHTML += `
           <div class="bakery-card">
             <h2 style="color: var(--color-prod);">${name}</h2>
@@ -63,7 +63,7 @@
             <button id=${id} class="btn-prod add-to-cart-btn">Add to cart</button>
           </div>
         `;
-      });
+      }); */
   
       class ShoppingCart {
         constructor() {
@@ -166,5 +166,33 @@
       });
   
       clearCartBtn.addEventListener("click", cart.clearCart.bind(cart));
+      
+      //Fetching products from FakeStore API
+      fetch(`https://fakestoreapi.com/products`)
+      .then(response => response.json())
+      .then(data => {
+        const products =data.filter(product => product.category === "men's clothing" || product.category === "women's clothing");
+        bakeryCards.innerHTML = ''; //cleaning cards
+        products.forEach(({ title, id, price, category, image}) => {
+          bakeryCards.innerHTML += `
+          <div class="bakery-card">
+            <img src="${image}" alt="${title}" class="bakery-img" />
+            <h2 style="color: var(--color-prod);" class="bakery-price">$${price}</h2>
+            <p style="color: var(--color-prod);" class="product-category">Category: ${category}</p>
+            <button id="${id}" class="btn-prod add-to-cart-btn">Add to cart</button> 
+          </div>
+          `
+        });
+
+        //New "Add to cart"
+        const newAddToCartBtns = document.getElementsByClassName("add-to-cart-btn");
+        [...newAddToCartBtns].forEach((btn) => {
+          btn.addEventListener("click", (event) => {
+            cart.addItem(Number(event.target.id), products);
+            totalNumberOfItems.textContent = cart.getCounts();
+            cart.calculateTotal();
+          });
+        });
+      });
     });
   </script>
