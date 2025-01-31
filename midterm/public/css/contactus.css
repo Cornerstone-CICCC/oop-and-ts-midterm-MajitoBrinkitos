@@ -1,0 +1,13 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form h2 {
+  font-family: "Poiret One", serif;
+  color: var(--background-color-h2);
+  font-size: 4rem;
+}
+
+/*# sourceMappingURL=contactus.css.map */

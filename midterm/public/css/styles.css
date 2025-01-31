@@ -21,6 +21,7 @@
   --background-ft: #F5DEB3;
   --text-ft: #8B4513;
   --family-ft: "Playwrite IN", serif;
+  --background-color-h2: black;
 }
 
 [data-bs-theme=dark] {
@@ -39,6 +40,7 @@
   --background-ft: black;
   --text-ft: white;
   --family-ft: "Playwrite IN", serif;
+  --background-color-h2: whitesmoke;
 }
 
 @media (max-width: 575px) {
@@ -476,6 +478,18 @@
     width: 300px;
   }
 }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form h2 {
+  font-family: "Poiret One", serif;
+  color: var(--background-color-h2);
+  font-size: 4rem;
+}
+
 .navbar {
   background-color: var(--background-color);
   color: var(--text-nav);

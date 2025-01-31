@@ -21,6 +21,7 @@
   --background-ft: #F5DEB3;
   --text-ft: #8B4513;
   --family-ft: "Playwrite IN", serif;
+  --background-color-h2: black;
 }
 
 [data-bs-theme=dark] {
@@ -39,6 +40,7 @@
   --background-ft: black;
   --text-ft: white;
   --family-ft: "Playwrite IN", serif;
+  --background-color-h2: whitesmoke;
 }
 
 /*# sourceMappingURL=variables.css.map */
