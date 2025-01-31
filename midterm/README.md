@@ -17,11 +17,19 @@ The project is structured into the following folders and files:
 
 - **Hero** This is welcome message inviting customer to explore more about the amazing designs.
 
+![Hero Image](image-1.png)
+
 - **About Us** A small description of the founder and what inspires him everyday to create unique designs to dress Burnaby City.
+
+![About Image](image-2.png)
 
 - **Stories** A section at the bottom part of the main page to showcase the satisfaction and opinions of current clients to future ones.
 
+![Stories Image](image-3.png)
+
 - **Footer** A simple footer that gives access to the Social Network Links of the Company.
+
+![Footer](image-4.png)
 
 ## Store - Products Page
 - This page displays the

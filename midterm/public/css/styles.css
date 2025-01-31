@@ -459,8 +459,8 @@
 }
 .bakery-card .bakery-img {
   width: 100%;
-  max-width: 350px;
-  height: 300px;
+  max-width: 400px;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
 }
