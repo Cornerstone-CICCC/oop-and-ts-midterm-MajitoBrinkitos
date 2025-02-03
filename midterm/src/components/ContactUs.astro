@@ -1,16 +1,84 @@
 ---
 ---
-<div class="container contact-form">
-    <h2 class="contact-h2">Get in contact with us</h2>
-    <p>Fill in the form or just drop by</p>
-    <!--form -->
-    <form method="post">
-        <fieldset>
-            <!--First Name -->
-            <label for="first-name">
-                Name: <input required id="first-name">
-            </label>
-        </fieldset>
-    </form>
+<!--Form Container -->
+<div class="container form">
+    <div class="row row-form">
+        <div class="col col-form">
+            <!--Title container -->
+            <div class="container title-section">
+                <div class="row row-title-section">
+                    <h2>Contact us</h2>
+                    <p id="paragraph">Contact us or just drop by</p>
+                </div>
+            </div>
+            <!--Contact Form container -->
+            <div class="container data-section">
+                <form id="contactForm">
+                <!--First, last name -->
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <p>First name</p>
+                        <input required id="first-name" type="text" name="first-name">
+                    </div>
+                    <div class="col col-data">
+                        <p>Last name</p>
+                        <input required id="last-name" type="text" name="last-name">
+                    </div>
+                </div>
+                <!--Phone, email -->
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <p>Phone number</p>
+                        <input required id="phone" type="text" name="phone">
+                    </div>
+                    <div class="col col-data">
+                        <p>Email</p>
+                        <input required id="email" type="text" name="email">
+                    </div>
+                </div>
+                <!--Services -->
+                <div class="row row-data">
+                    <div class="col col-data">
+                        <label for="services">Select service
+                            <select id="services" name="options">
+                                <option value="">(select one)</option>
+                                <option value="1">Engine Services</option>
+                                <option value="2">Air Conditioning</option>
+                                <option value="3">Engine management</option>
+                                <option value="4">Steering</option>
+                                <option value="5">Wheel</option>
+                            </select>
+                          </label>
+                    </div>
+                    <div class="col col-data">
+                        <p>Appointment date</p>
+                        <input type="date" id="appointmentDate" name="appointmentDate">
+                    </div>
+                </div>
+                <!--Message -->
+                <div class="row row-message">
+                    <p>Message</p>
+                    <textarea rows="10" name="message" id="message" placeholder="Type your message...">
+                    </textarea>
+                </div>
+                <!--Accept terms -->
+                <div class="terms">
+                    <label for="terms-and-conditions">
+                        <input class="inline-checkbox" id="terms-and-conditions" type="checkbox" required />I accept the <a href="https://www.example.com">terms and conditions</a>
+                    </label>
+                </div>
+                <!--Submit Button -->
+                <div class="row row-btn">
+                    <button type="submit">Submit</button>
+                </div>
+                </form>
+                <div id="messageContainer"></div>
+            </div>
+        </div>
+        <div class="col col-form">
+            <div class="container image-section">
+                    <img src="/images/image.png" alt="wheel img">
+            </div>
+        </div>
 </div>
-
+</div>

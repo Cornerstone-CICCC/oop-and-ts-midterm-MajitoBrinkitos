@@ -42,3 +42,6 @@ The project is structured into the following folders and files:
 - **Add to Cart** Button
 
 - **Show/Hide Cart** that allows the customer to add a product, hide the cart, and continue shopping.
+
+## Contact Us Page
+- This page has a simple form that allows the customer to send a message to the company.
